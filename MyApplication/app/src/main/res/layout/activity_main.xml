@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.yaman.hesapmakinesi.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etilkSayi"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/twSonuc"
+        android:layout_alignEnd="@+id/twSonuc" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etikinciSayi"
+        android:layout_alignTop="@+id/etilkSayi"
+        android:layout_alignBottom="@+id/etilkSayi"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/btnCikar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/twSonuc"
+        android:layout_marginBottom="54dp"
+        android:hint="Sonuç"
+        android:layout_above="@+id/btnTopla"
+        android:layout_alignStart="@+id/btnMod" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/btnTopla"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:onClick="topla" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/btnCikar"
+        android:layout_alignTop="@+id/btnTopla"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="54dp"
+        android:onClick="cikar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:id="@+id/btnCarp"
+        android:layout_below="@+id/btnTopla"
+        android:layout_alignParentStart="true"
+        android:onClick="carp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:id="@+id/btnBol"
+        android:layout_alignTop="@+id/btnCarp"
+        android:layout_alignStart="@+id/btnCikar"
+        android:onClick="bol" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:id="@+id/btnMod"
+        android:layout_below="@+id/btnBol"
+        android:layout_toStartOf="@+id/btnBol"
+        android:onClick="mod" />
+
+</RelativeLayout>
